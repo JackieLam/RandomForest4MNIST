@@ -17,7 +17,9 @@
 2. FileReader - Be responsible for reading the data in the .csv file, including both the train and the test data. I use 4 threads to read the data simultaneously using file input/output stream. So in the directory, I split the train.csv into train1.csv ~ train4.csv, each of which include 5000. The science is the same for the test.csv, seperated into 4 shares, each of which containing 10000 samples.
 3. Tester - Run each sample way through a tree down to the leaf and return a classification result accordingly.
 4. FileWriter - In charge of writing the results to out.csv after training and testing.
-## Keynotes: Some Intriguing Markdowns ###1.Optimization measures
+
+## Keynotes: Some Intriguing Markdowns 
+### 1.Optimization measures
 * (Unfinished)Use char to store the data matrix and process bitwise operation when doing calculation. While I currently use "short" to store the matrix, which is taking up twice the size of memory use.
 * Use STL set to avoid duplicated value split operation.
 * (Unfinished)Use non-recursive method (Heap) to build up the tree.
