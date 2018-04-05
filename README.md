@@ -9,7 +9,8 @@
 * Note that you should adjust the 3 absolute directory paths in main.cpp according to your own computer environment to run the program.
 * The original data file, test.csv and train.csv is equally seperated into 4 pieces. With file name test1.csvtest4.csv and train1.csvtrain4.csv. You should split the data before running it!
 
-## Classes & Tech Details The general logic of the whole program could be inspected within the main.cpp.
+## Classes & Tech Details 
+The general logic of the whole program could be inspected within the main.cpp.
 1. DecisionTree - THE CORE PART OF THE PROGRAM. Use CART algorithm to implement the tree-based regression. I used Gini coefficient to decide the bestIndex and bestValue for splitting. Prepuning is implemented, while postpuning is neglected under the circumstances of random forest.
     * Prepuning 1: If (originGINI - newGINI < tolS), it means splitting under the current (bestIndex, bestValue) situation has minor influence on the dataSet. So just set the current node as a leaf node.
     * Prepuning 2: If the number of samples within either of the splitted dataSets < tolN, set it to leaf, for the reason that small set of samples is not persuasive during classification.
